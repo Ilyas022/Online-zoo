@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+
+		@@include('html/header.html',{
+		"routeDonate": "",
+		"routeAbout": "href='./index.html'",
+		"activeClassAbout": "menu__link",
+		"activeClassDonate": "menu__link menu__link_active",})
+		<main class="main">
+			<section class="main__pickAndFeed pickAndFeedFriend">
+				<img class="pickAndFeedFriend__bg" src="@img/bgPanda.jpg" alt="">
+				<div class="pickAndFeedFriend__container _container">
+					<h3 class="pickAndFeedFriend__helpingHand">THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
+					<div class="pickAndFeedFriend__text">Even though the Zoo has been able to reopen, we are at a greatly reduced
+						capacity with educational programs and public and private events cancelled or postponed for additional
+						months. <span>We need you now more than ever to help ensure that we overcome these challenges. We have been
+							actively raising funds in the community, and we are grateful for the generosity.</span> But much more
+						support is
+						still needed, and we need your help! Please consider a gift today – no matter what size – to help us sustain
+						our mission.</div>
+					<h3 class="pickAndFeedFriend__donationInfo">Donation Information</h3>
+					<div class="pickAndFeedFriend__body pickAndFeedFriendBody">
+						<h2 class="pickAndFeedFriendBody__title">Pick and feed a friend</h2>
+						<p class="pickAndFeedFriendBody__subtitle">We know the animals bring you joy, and in these extraordinary
+							times, we’re glad.</p>
+						<div class="pickAndFeedFriendBody__choice pickAndFeedFriendChoice">
+							<div class="pickAndFeedFriendChoice__animal animalChoice">
+								<div class="animalChoice__numberOfDays numberOfDays">
+									<div class="numberOfDays__inner">
+										<div class="numberOfDays__days">4</div>
+										<div class="numberOfDays__text">Panda diet for the day.</div>
+									</div>
+									<svg class="animalChoice__icon">
+										<use xlink:href="@img/icons/icons.svg#x_icon"></use>
+									</svg>
+								</div>
+
+								<div class="animalChoice__kindOfAnimal">
+									<svg class="">
+										<use xlink:href="@img/icons/icons.svg#bigPanda"></use>
+									</svg>
+								</div>
+
+
+							</div>
+							<form class="pickAndFeedFriendChoice__sum pickAndFeedFriendChoiceSum" action="#" method="post">
+								<div class="pickAndFeedFriendChoiceSum__title">Amount</div>
+
+								<div class="pickAndFeedFriendChoiceSum__money">
+									<div class="pickAndFeedFriendChoiceSum__bar">
+									</div>
+								</div>
+								<div class="pickAndFeedFriendChoiceSum__container">
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="fiveThous" class="pickAndFeedFriendChoiceSum__input" value="5000">
+										<label class="amount-label" for="fiveThous">$5000</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="twoThous" class="pickAndFeedFriendChoiceSum__input" value="2000">
+										<label class="amount-label" for="twoThous">$2000</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="Thous" class="pickAndFeedFriendChoiceSum__input" value="1000">
+										<label class="amount-label" for="Thous">$1000</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="fiveHund" class="pickAndFeedFriendChoiceSum__input" value="500">
+										<label class="amount-label" for="fiveHund">$500</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="twfivHund" class="pickAndFeedFriendChoiceSum__input" value="250">
+										<label class="amount-label" for="twfivHund">$250</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="Hund" class="pickAndFeedFriendChoiceSum__input" value="100" checked>
+										<label class="amount-label" for="Hund">$100</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="fifty" class="pickAndFeedFriendChoiceSum__input" value="50">
+										<label class="amount-label" for="fifty">$50</label>
+									</div>
+									<div class="pickAndFeedFriendChoiceSum__count">
+										<span></span>
+										<input type="radio" name="amount" id="twfive" class="pickAndFeedFriendChoiceSum__input" value="25">
+										<label class="amount-label" for="twfive">$25</label>
+									</div>
+
+								</div>
+
+
+								<div class="anotherAmountContainer"><input id="anotherAmount" class="pickAndFeedFriendChoiceSum__anotherMoney" onkeypress="this.value=this.value.substring(0,3)" type="number" name="amount" maxlength="4" placeholder="Another amount">
+									<svg class="anotherAmountIcon">
+										<use xlink:href="@img/icons/icons.svg#dollar"></use>
+									</svg>
+								</div>
+								<div class="chooseDate">
+									<div class="monthly">
+										<input id="monthlyFee" class="payment-type" type="radio" name="payment-type">
+										<label class="choose-date-label" for="monthlyFee">Monthly</label>
+									</div>
+									<div class="once">
+										<input id="singleFee" class="payment-type" type="radio" name="payment-type" checked>
+										<label class="choose-date-label" for="singleFee">Once</label>
+									</div>
+								</div>
+
+							</form>
+							<a class="pickAndFeedFriendChoice__button _button" href="#"><span>Feed a friend now</span></a>
+							<div class="pickAndFeedFriendChoice__text">Share with your friends on social networks</div>
+
+
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+		@@include('html/footer.html',{
+			"routeAbout": "href='./index.html'",
+			"donateFooterClass": "donate-footer__container",
+			"donateDesigned": "donate-designed",
+			"donateFooterSoc" : "donate-footer-body__socials",
+		})
+
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

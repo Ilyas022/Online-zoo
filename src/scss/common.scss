@@ -1,0 +1,302 @@
+@import "variables.scss";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+._container {
+	width: 100%;
+  max-width: 1190px;
+	padding: 0 15px;
+	margin: 0 auto;
+	@media (max-width: $pc) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@media (max-width: 830px) {
+		padding-left: 20px;
+    padding-right: 20px;
+	}
+	@media (max-width: 610px) {
+		padding-left: 10px;
+    padding-right: 10px;
+	}
+}
+
+._ibg {
+	position: relative;
+}
+
+._ibg img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	}
+
+._button {
+	display: block;
+	position: relative;
+	width: 298px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	border-radius: 25px;
+	padding-left: 8px;
+	background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	transition: background-image .5s ease 0s;
+	& span {
+		position: relative;
+		z-index: 1;
+	}
+	&::before {
+		content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		background-color: #E47209;
+    opacity: 0;
+    transition: opacity 0.5s;
+		border-radius: 25px;
+	}
+	&::after {
+		content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		background-color: #4B9200;
+    opacity: 0;
+    transition: opacity 0.5s;
+		border-radius: 25px;
+	}
+	&:hover::before {
+		opacity: 1;
+	}
+	&:active::after{
+		opacity: 1;
+	}
+}
+
+.menu__link_active{
+	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.controlButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 62px;
+	height: 62px;
+	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+	border-radius: 50%;
+	@media (max-width: 610px) {
+		display: none;
+	}
+	&__icon {
+		width: 18px;
+		height: 10px;
+	}
+}
+
+._lock {
+	overflow: hidden;
+}
+
+.to-left {
+	
+	position: relative;
+	animation-name: left;
+	animation-duration: 2s;
+	
+}
+.to-right {
+	
+	position: relative;
+	animation-name: right;
+	animation-duration: 2s;
+	
+}
+
+.from-left {
+	animation-name: bmo;
+	animation-duration: 2s;
+	position: absolute;
+}
+
+.from-right {
+	animation-name: amo;
+	animation-duration: 2s;
+	position: absolute;
+}
+
+@keyframes left {
+	from {
+		left: 0;
+	}
+	to {
+		left: -110%
+	}
+};
+
+
+@keyframes right {
+	from {
+		right: 0;
+	}
+	to {
+		right: -110%
+	}
+};
+
+
+@keyframes amo {
+	0% {
+		width: 100%;
+		top: 0;
+		right: -100%;
+	}
+	100% {
+		top: 0;
+		right: 0px;
+		width: 100%;
+	}
+}
+@keyframes bmo {
+	0% {
+		width: 100%;
+		top: 0;
+		left: -100%;
+	}
+	100% {
+		top: 0;
+		left: 0px;
+		width: 100%;
+	}
+}
+
+.choice-wrapper {
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+	user-select: none;
+}
+
+.testimonials-wrapper {
+	display: flex;
+	column-gap: 30px;
+	position: relative;
+	transition: left ease-in 1s 0s;
+	@media (max-width: 999px) {
+		flex-direction: column;
+    row-gap: 15px;
+	}
+}
+
+.testimonials-to-left {
+	position: relative;
+	animation-name: testimonials-left;
+	animation-duration: 1s;
+}
+
+@keyframes testimonials-left {
+	from {
+	}
+	to {
+		left: -268px;
+	}
+}
+
+.left-one {
+	left: -268px;
+}
+
+.pop-up {
+	display: none;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	top: 0;
+	height: 100vh;
+	z-index: 10;
+	align-items: center;
+	justify-content: center;
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: .3;
+	}
+	&__button {
+		position: absolute;
+    top: 5px;
+    right: 5px;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+		background-color: rgb(114, 172, 91);
+		border-radius: 50%;
+		&::before, &::after {
+			content: '';
+			height: 20px;
+			width: 2px;
+			background-color: #000;
+			position: absolute;
+			z-index: 10;
+			top: 50%;
+			left: 50%;
+			border-radius: 5px;
+		}
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(315deg);
+		}
+	}
+}
+
+.pop-up__inner {
+	width: 307.49px;
+	height: 431px;
+	background-color: lightpink;
+	border-radius: 20px;
+	position: relative;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pop-up_visible {
+	display: flex;
+}
+
+.tall {
+
+		max-height: 373px !important; 
+		height: 100%;
+	
+	
+}
