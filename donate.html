@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html', {
-"title":"Главная"
-})
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="Image/x-icon" href="img/icons/favicon.svg" rel="icon">
+	<link type="image/x-icon" href="img/icons/favicon.svg" rel="shortcut icon">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Главная</title>
+</head>
 
 <body>
 	<div class="wrapper">
 
-		@@include('html/header.html',{
-		"routeDonate": "",
-		"routeAbout": "href='./index.html'",
-		"activeClassAbout": "menu__link",
-		"activeClassDonate": "menu__link menu__link_active",})
+		<header class="header">
+	<div class="header__container _container">
+		<div class="header__logo logo">
+			<a class="logo__link header__logo_link" href='./index.html'>
+				<h1>PetStory online</h1>
+		</a>
+		<div class="logo__image"></div>
+		</div>
+		<div class="header__links">
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href='./index.html' class="menu__link">
+							About
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+							Map
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+							Zoos
+						</a>
+					</li>
+					<li class="menu__item">
+						<a  class="menu__link menu__link_active">
+							Donate
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+							Contact us
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<a class="header__copyRight" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">
+				Designed by &copy;
+			</a>
+		</div>
+		<div class="header__burger burger">
+			<span></span>
+		</div>
+	</div>
+</header>
 		<main class="main">
 			<section class="main__pickAndFeed pickAndFeedFriend">
-				<img class="pickAndFeedFriend__bg" src="@img/bgPanda.jpg" alt="">
+				<img class="pickAndFeedFriend__bg" src="img/bgPanda.jpg" alt="">
 				<div class="pickAndFeedFriend__container _container">
 					<h3 class="pickAndFeedFriend__helpingHand">THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
 					<div class="pickAndFeedFriend__text">Even though the Zoo has been able to reopen, we are at a greatly reduced
@@ -37,13 +85,13 @@
 										<div class="numberOfDays__text">Panda diet for the day.</div>
 									</div>
 									<svg class="animalChoice__icon">
-										<use xlink:href="@img/icons/icons.svg#x_icon"></use>
+										<use xlink:href="img/icons/icons.svg#x_icon"></use>
 									</svg>
 								</div>
 
 								<div class="animalChoice__kindOfAnimal">
 									<svg class="">
-										<use xlink:href="@img/icons/icons.svg#bigPanda"></use>
+										<use xlink:href="img/icons/icons.svg#bigPanda"></use>
 									</svg>
 								</div>
 
@@ -103,7 +151,7 @@
 
 								<div class="anotherAmountContainer"><input id="anotherAmount" class="pickAndFeedFriendChoiceSum__anotherMoney" onkeypress="this.value=this.value.substring(0,3)" type="number" name="amount" maxlength="4" placeholder="Another amount">
 									<svg class="anotherAmountIcon">
-										<use xlink:href="@img/icons/icons.svg#dollar"></use>
+										<use xlink:href="img/icons/icons.svg#dollar"></use>
 									</svg>
 								</div>
 								<div class="chooseDate">
@@ -134,12 +182,99 @@
 			</section>
 
 		</main>
-		@@include('html/footer.html',{
-			"routeAbout": "href='./index.html'",
-			"donateFooterClass": "donate-footer__container",
-			"donateDesigned": "donate-designed",
-			"donateFooterSoc" : "donate-footer-body__socials",
-		})
+		<footer class="footer donate__footer">
+	<div  class="footer__container _container donate-footer__container">
+		<div class="footer__head">
+			<div class="footer__logo logo">
+				<a class="logo__link" href="/">
+				PetStory online
+			</a>
+			<img class="footer__logoImage logo__image" src="img/icons/icons.svg#bamboo" alt="">
+			</div>
+			<form class="footer__subscribeForm subscribeForm" action="#" method="post">
+				<p class="subscribeForm__label">Subscribe to our news</p>
+				<input class="subscribeForm__input" type="email" name="email" value="" placeholder="Enter your email"></input>
+				<button class="subscribeForm__submitButton" type="submit">Submit</button>
+			</form>
+		</div>
+		<a class="footer__button _button" @@routeDonate><span>donate for volunteers</span></a>
+		<div class="footer__body footerBody">
+
+			<ul class="footerBody__socials socials donate-footer-body__socials">
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_fb">
+							<use xlink:href="img/icons/icons.svg#fb"></use>
+						</svg>
+						
+						</div>
+						<span>Facebook</spa>
+						
+					</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_tw">
+							<use xlink:href="img/icons/icons.svg#tw"></use>
+						</svg>
+						</div>
+						
+						
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_ig">
+							<use xlink:href="img/icons/icons.svg#ig"></use>
+						</svg>
+						</div>
+						<span>Instagram</span>
+					</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_yt">
+							<use xlink:href="img/icons/icons.svg#yt"></use>
+						</svg>
+						</div>
+						<span>YouTube</span>
+					</a>
+				</li>				
+			</ul>
+			<nav class="footerBody__menu menu">
+				<ul class="footerBody__list menu__list @@aboutFooterList">
+					<li class="menu__item">
+						<a href='./index.html' class="@@activeClassAbout">About</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Map</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Zoos</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Contact us</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footerBody__designed donate-designed">
+				<p>Designed by Alisa Samborskaya</p>
+				<p>©RSSchool & ©Yem Digital 2021</p>
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		
+	</div>
+</footer>
 
 	</div>
 	<script src="js/app.js"></script>

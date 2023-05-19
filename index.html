@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html', {
-"title":"Главная"
-})
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="Image/x-icon" href="img/icons/favicon.svg" rel="icon">
+	<link type="image/x-icon" href="img/icons/favicon.svg" rel="shortcut icon">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Главная</title>
+</head>
 <body>
 	<div class="wrapper">
-		@@include('html/header.html',{
-			"routeAbout": "",
-			"routeDonate": "href='./donate.html'",
-			"activeClassAbout": "menu__link menu__link_active",
-			"activeClassDonate": "menu__link",})
+		<header class="header">
+	<div class="header__container _container">
+		<div class="header__logo logo">
+			<a class="logo__link header__logo_link" >
+				<h1>PetStory online</h1>
+		</a>
+		<div class="logo__image"></div>
+		</div>
+		<div class="header__links">
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a  class="menu__link menu__link_active">
+							About
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+							Map
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+							Zoos
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href='./donate.html' class="menu__link">
+							Donate
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">
+							Contact us
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<a class="header__copyRight" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">
+				Designed by &copy;
+			</a>
+		</div>
+		<div class="header__burger burger">
+			<span></span>
+		</div>
+	</div>
+</header>
 		<main class="main">
 			<div class="testimonials__pop-up pop-up">
 				<div class="pop-up__inner">
@@ -29,7 +77,7 @@
 			<section class="main__backstage backstage">
 				<div class="backstage__container _container">
 					<div class="backstage__image">
-						<img src="@img/backstageImg.jpg" alt="">
+						<img src="img/backstageImg.jpg" alt="">
 					</div>
 					<div class="backstage__info info-column">
 						<h2 class="info-column__title">
@@ -57,14 +105,14 @@
 					<div class="choice__controlButton choice__controlButton_left controlButton">
 						<span>
 							<svg class="controlButton__icon">
-								<use xlink:href="@img/icons/icons.svg#controLeft"></use>
+								<use xlink:href="img/icons/icons.svg#controLeft"></use>
 							</svg>
 						</span>
 					</div>
 					<div class="choice__controlButton choice__controlButton_right controlButton">
 						<span>
 							<svg class="controlButton__icon">
-							<use xlink:href="@img/icons/icons.svg#controlRight"></use>
+							<use xlink:href="img/icons/icons.svg#controlRight"></use>
 						</svg>
 						</span>
 					</div>
@@ -73,7 +121,7 @@
 						<div class="choice__cards">
 							<div class="choice__card animalCard">
 								<div class="animalCard__image">
-									<img src="@img/bigPanda.jpg" alt="">
+									<img src="img/bigPanda.jpg" alt="">
 								</div>
 								<div class="animalCard__info">
 									<span class="animalCard__wrapper">
@@ -81,13 +129,13 @@
 										<div class="animalCard__location">Native to Southwest China</div>
 									</span>
 										<div class="animalCard__kindOfDish_vegetables">
-										<img src="@img/icons/icons.svg#vegetables" alt="">
+										<img src="img/icons/icons.svg#vegetables" alt="">
 									</div>
 								</div>
 							</div>
 							<div class="choice__card animalCard">
 								<div class="animalCard__image">
-									<img src="@img/bigEagle.jpg" alt="">
+									<img src="img/bigEagle.jpg" alt="">
 								</div>
 								<div class="animalCard__info">
 									<span class="animalCard__wrapper">
@@ -95,13 +143,13 @@
 										<div class="animalCard__location">Native to South America</div>
 									</span>
 									<div class="animalCard__kindOfDish_meet">
-										<img src="@img/icons/icons.svg#meet" alt="">
+										<img src="img/icons/icons.svg#meet" alt="">
 									</div>
 								</div>
 							</div>
 							<div class="choice__card animalCard">
 								<div class="animalCard__image">
-									<img src="@img/bigGorilla.jpg" alt="">
+									<img src="img/bigGorilla.jpg" alt="">
 								</div>
 								<div class="animalCard__info">
 									<span class="animalCard__wrapper">
@@ -109,13 +157,13 @@
 										<div class="animalCard__location">Native to Congo</div>
 									</span>
 									<div class="animalCard__kindOfDish_vegetables">
-										<img src="@img/icons/icons.svg#vegetables" alt="">
+										<img src="img/icons/icons.svg#vegetables" alt="">
 									</div>
 								</div>
 							</div>
 							<div class="choice__card animalCard">
 								<div class="animalCard__image">
-									<img src="@img/bigSloth.jpg" alt="">
+									<img src="img/bigSloth.jpg" alt="">
 								</div>
 								<div class="animalCard__info">
 									<span class="animalCard__wrapper">
@@ -123,13 +171,13 @@
 										<div class="animalCard__location">Mesoamerica, South America</div>
 									</span>
 									<div class="animalCard__kindOfDish_vegetables">
-										<img src="@img/icons/icons.svg#vegetables" alt="">
+										<img src="img/icons/icons.svg#vegetables" alt="">
 									</div>
 								</div>
 							</div>
 							<div class="choice__card animalCard">
 								<div class="animalCard__image">
-									<img src="@img/bigCheetah.jpg" alt="">
+									<img src="img/bigCheetah.jpg" alt="">
 								</div>
 								<div class="animalCard__info">
 									<span class="animalCard__wrapper">
@@ -137,13 +185,13 @@
 										<div class="animalCard__location">Native to Africa</div>
 									</span>
 									<div class="animalCard__kindOfDish_meet">
-										<img src="@img/icons/icons.svg#meet" alt="">
+										<img src="img/icons/icons.svg#meet" alt="">
 									</div>
 								</div>
 							</div>
 							<div class="choice__card animalCard">
 								<div class="animalCard__image">
-									<img src="@img/bigPenguin.jpg" alt="">
+									<img src="img/bigPenguin.jpg" alt="">
 								</div>
 								<div class="animalCard__info">
 									<span class="animalCard__wrapper">
@@ -151,7 +199,7 @@
 										<div class="animalCard__location">Native to Antarctica</div>
 									</span>
 									<div class="animalCard__kindOfDish_meet">
-										<img src="@img/icons/icons.svg#meet" alt="">
+										<img src="img/icons/icons.svg#meet" alt="">
 									</div>
 								</div>
 							</div>
@@ -161,10 +209,10 @@
 
 				</div>
 				<div class="choice__flower choice__flower_left">
-					<img src="@img/choiceFlowerLeft.png" alt="">
+					<img src="img/choiceFlowerLeft.png" alt="">
 				</div>
 				<div class="choice__flower choice__flower_right">
-					<img src="@img/choiceFlowerRight.png" alt="">
+					<img src="img/choiceFlowerRight.png" alt="">
 				</div>
 			</section>
 			<section class="main__pickAndFeet pickAndFeet">
@@ -184,7 +232,7 @@
 							<div class="empl__card empl-card">
 								<div class="empl-card__image">
 									<svg class="empl-card__image_pay">
-										<use xlink:href="@img/icons/icons.svg#pay"></use>
+										<use xlink:href="img/icons/icons.svg#pay"></use>
 									</svg>
 								</div>
 								<div class="empl-card__text">Pay with card</div>
@@ -192,25 +240,25 @@
 							</div>
 							<div class="empl__arrow empl__arrow_left">
 								<!-- <svg>
-									<use xlink:href="@img/icons/icons.svg#arrow"></use>
+									<use xlink:href="img/icons/icons.svg#arrow"></use>
 								</svg> -->
 							</div>
 							<div class="empl__card empl-card">
 								<div class="empl-card__image">
-									<img class="empl-card__image_zoo" src="@img/zoo.png">
+									<img class="empl-card__image_zoo" src="img/zoo.png">
 								</div>
 								<div class="empl-card__text">Payment goes to the zoo</div>
 
 							</div>
 							<div class="empl__arrow empl__arrow_right">
 								<!-- <svg>
-									<use xlink:href="@img/icons/icons.svg#arrow"></use>
+									<use xlink:href="img/icons/icons.svg#arrow"></use>
 								</svg> -->
 							</div>
 							<div class="empl__card empl-card">
 								<div class="empl-card__image">
 									<svg class="empl-card__image_monkey">
-										<use xlink:href="@img/icons/icons.svg#monkey"></use>
+										<use xlink:href="img/icons/icons.svg#monkey"></use>
 									</svg>
 								</div>
 								<div class="empl-card__text">Your favourite animal gets delicious dish</div>
@@ -233,7 +281,7 @@
 								<div class="cardComments__head">
 									<div class="commentsCard__profileImg">
 										<svg class="empl-card__image_pay">
-											<use xlink:href="@img/icons/icons.svg#userIcon"></use>
+											<use xlink:href="img/icons/icons.svg#userIcon"></use>
 										</svg>
 									</div>
 									<div class="commentsCard__userInfo">
@@ -260,7 +308,7 @@
 							<div class="comments__card commentsCard">
 								<div class="cardComments__head">
 									<div class="commentsCard__profileImg">
-										<img src="@img/oscarLogo.jpg" alt="">
+										<img src="img/oscarLogo.jpg" alt="">
 									</div>
 									<div class="commentsCard__userInfo">
 										<div class="commentsCard__name">Oskar Samborsky</div>
@@ -284,7 +332,7 @@
 							<div class="comments__card commentsCard">
 								<div class="cardComments__head">
 									<div class="commentsCard__profileImg">
-										<img src="@img/federickaLogo.jpg" alt="">
+										<img src="img/federickaLogo.jpg" alt="">
 									</div>
 									<div class="commentsCard__userInfo">
 										<div class="commentsCard__name">Fredericka Michelin</div>
@@ -307,7 +355,7 @@
 							<div class="comments__card commentsCard">
 								<div class="cardComments__head">
 									<div class="commentsCard__profileImg">
-										<img src="@img/milaLogo.jpg" alt="">
+										<img src="img/milaLogo.jpg" alt="">
 									</div>
 									<div class="commentsCard__userInfo">
 										<div class="commentsCard__name">Mila Riksha</div>
@@ -333,15 +381,103 @@
 					<a href="#" class="comments__button _button"><span>leave feedback</span></a>
 				</div>
 				<div class="comments__flower">
-					<img src="@img/testimonialsFlower.png" alt="">
+					<img src="img/testimonialsFlower.png" alt="">
 				</div>
 			</section>
 		</main>
-		@@include('html/footer.html',{
-			"routeAbout": "",
-			"activeClassAbout": "menu__link menu__link_active",
-			"routeDonate": "href='./donate.html'",
-			"aboutFooterList": "about-footer-list"})
+		<footer class="footer donate__footer">
+	<div  class="footer__container _container @@donateFooterClass">
+		<div class="footer__head">
+			<div class="footer__logo logo">
+				<a class="logo__link" href="/">
+				PetStory online
+			</a>
+			<img class="footer__logoImage logo__image" src="img/icons/icons.svg#bamboo" alt="">
+			</div>
+			<form class="footer__subscribeForm subscribeForm" action="#" method="post">
+				<p class="subscribeForm__label">Subscribe to our news</p>
+				<input class="subscribeForm__input" type="email" name="email" value="" placeholder="Enter your email"></input>
+				<button class="subscribeForm__submitButton" type="submit">Submit</button>
+			</form>
+		</div>
+		<a class="footer__button _button" href='./donate.html'><span>donate for volunteers</span></a>
+		<div class="footer__body footerBody">
+
+			<ul class="footerBody__socials socials @@donateFooterSoc">
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_fb">
+							<use xlink:href="img/icons/icons.svg#fb"></use>
+						</svg>
+						
+						</div>
+						<span>Facebook</spa>
+						
+					</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_tw">
+							<use xlink:href="img/icons/icons.svg#tw"></use>
+						</svg>
+						</div>
+						
+						
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_ig">
+							<use xlink:href="img/icons/icons.svg#ig"></use>
+						</svg>
+						</div>
+						<span>Instagram</span>
+					</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="#">
+						<div class="socials__iconContainer">
+							<svg class="socials__icon socials__icon_yt">
+							<use xlink:href="img/icons/icons.svg#yt"></use>
+						</svg>
+						</div>
+						<span>YouTube</span>
+					</a>
+				</li>				
+			</ul>
+			<nav class="footerBody__menu menu">
+				<ul class="footerBody__list menu__list about-footer-list">
+					<li class="menu__item">
+						<a  class="menu__link menu__link_active">About</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Map</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Zoos</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Contact us</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footerBody__designed @@donateDesigned">
+				<p>Designed by Alisa Samborskaya</p>
+				<p>©RSSchool & ©Yem Digital 2021</p>
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		
+	</div>
+</footer>
 
 	</div>
 	<script src="js/app.js"></script>
